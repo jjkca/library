@@ -607,13 +607,13 @@ public class TimeUtils {
     }
 
     public static String getDateFromTime(String dateTime) {
-		if (StringUtil.isNull(dateTime) || dateTime.length() < 10) {
+		if (StringUtils.isNull(dateTime) || dateTime.length() < 10) {
 			return dateTime;
 		}
 		return dateTime.substring(0, 10);
 	}
     public static String getDateMinuteFromTime(String dateTime) {
-		if (StringUtil.isNull(dateTime) || dateTime.length() < 13) {
+		if (StringUtils.isNull(dateTime) || dateTime.length() < 13) {
 			return dateTime;
 		}
 		return dateTime.substring(0, 13);
@@ -651,7 +651,7 @@ public class TimeUtils {
 
 
     public static String friendlyTime(String dateTime){
-		if(StringUtil.isNull(dateTime))
+		if(StringUtils.isNull(dateTime))
 			return "";
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 		String cuDate = dateFormat.format(new Date());
